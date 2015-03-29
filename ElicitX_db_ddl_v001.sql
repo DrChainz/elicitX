@@ -122,66 +122,67 @@ sp_bindrule 'ListStatusDomain', 'ListStatus';
 CREATE TABLE [State]
 (
 	State			char(2)		NOT NULL UNIQUE,
-	StateName		varchar(30)	NOT NULL
+	StateName		varchar(30)	NOT NULL,
+	Exclude			YesNo		NOT NULL
 );
 
-INSERT [State] (State, StateName)
-SELECT 'AL','Alabama' UNION
-SELECT 'AK','Alaska' UNION
-SELECT 'AZ','Arizona' UNION
-SELECT 'AR','Arkansas' UNION
-SELECT 'CA','California' UNION
-SELECT 'CO','Colorado' UNION
-SELECT 'CT','Connecticut' UNION
-SELECT 'DE','Delaware' UNION
-SELECT 'FL','Florida' UNION
-SELECT 'GA','Georgia' UNION
-SELECT 'HI','Hawaii' UNION
-SELECT 'ID','Idaho' UNION
-SELECT 'IL','Illinois' UNION
-SELECT 'IN','Indiana' UNION
-SELECT 'IA','Iowa' UNION
-SELECT 'KS','Kansas' UNION
-SELECT 'KY','Kentucky' UNION
-SELECT 'LA','Louisiana' UNION
-SELECT 'ME','Maine' UNION
-SELECT 'MD','Maryland' UNION
-SELECT 'MA','Massachusetts' UNION
-SELECT 'MI','Michigan' UNION
-SELECT 'MN','Minnesota' UNION
-SELECT 'MS','Mississippi' UNION
-SELECT 'MO','Missouri' UNION
-SELECT 'MT','Montana' UNION
-SELECT 'NE','Nebraska' UNION
-SELECT 'NV','Nevada' UNION
-SELECT 'NH','New Hampshire' UNION
-SELECT 'NJ','New Jersey' UNION
-SELECT 'NM','New Mexico' UNION
-SELECT 'NY','New York' UNION
-SELECT 'NC','North Carolina' UNION
-SELECT 'ND','North Dakota' UNION
-SELECT 'OH','Ohio' UNION
-SELECT 'OK','Oklahoma' UNION
-SELECT 'OR','Oregon' UNION
-SELECT 'PA','Pennsylvania' UNION
-SELECT 'RI','Rhode Island' UNION
-SELECT 'SC','South Carolina' UNION
-SELECT 'SD','South Dakota' UNION
-SELECT 'TN','Tennessee' UNION
-SELECT 'TX','Texas' UNION
-SELECT 'UT','Utah' UNION
-SELECT 'VT','Vermont' UNION
-SELECT 'VA','Virginia' UNION
-SELECT 'WA','Washington' UNION
-SELECT 'WV','West Virginia' UNION
-SELECT 'WI','Wisconsin' UNION
-SELECT 'WY','Wyoming' UNION
-SELECT 'DC','Washington DC' UNION
-SELECT 'PR','Puerto Rico' UNION
-SELECT 'VI','U.S. Virgin Islands' UNION
-SELECT 'AS','American Samoa' UNION
-SELECT 'GU','Guam' UNION
-SELECT 'MP','Northern Mariana Islands'
+INSERT [State] (State, StateName, Exclude)
+SELECT 'AL','Alabama', 'N' UNION
+SELECT 'AK','Alaska', 'N' UNION
+SELECT 'AZ','Arizona', 'N' UNION
+SELECT 'AR','Arkansas', 'N' UNION
+SELECT 'CA','California', 'N' UNION
+SELECT 'CO','Colorado', 'N' UNION
+SELECT 'CT','Connecticut', 'N' UNION
+SELECT 'DE','Delaware', 'N' UNION
+SELECT 'FL','Florida', 'N' UNION
+SELECT 'GA','Georgia', 'N' UNION
+SELECT 'HI','Hawaii', 'N' UNION
+SELECT 'ID','Idaho', 'N' UNION
+SELECT 'IL','Illinois', 'N' UNION
+SELECT 'IN','Indiana', 'N' UNION
+SELECT 'IA','Iowa', 'N' UNION
+SELECT 'KS','Kansas', 'N' UNION
+SELECT 'KY','Kentucky', 'N' UNION
+SELECT 'LA','Louisiana', 'N' UNION
+SELECT 'ME','Maine', 'N' UNION
+SELECT 'MD','Maryland', 'N' UNION
+SELECT 'MA','Massachusetts', 'N' UNION
+SELECT 'MI','Michigan', 'N' UNION
+SELECT 'MN','Minnesota', 'N' UNION
+SELECT 'MS','Mississippi', 'N' UNION
+SELECT 'MO','Missouri', 'N' UNION
+SELECT 'MT','Montana', 'N' UNION
+SELECT 'NE','Nebraska', 'N' UNION
+SELECT 'NV','Nevada', 'N' UNION
+SELECT 'NH','New Hampshire', 'N' UNION
+SELECT 'NJ','New Jersey', 'N' UNION
+SELECT 'NM','New Mexico', 'N' UNION
+SELECT 'NY','New York', 'N' UNION
+SELECT 'NC','North Carolina', 'N' UNION
+SELECT 'ND','North Dakota', 'N' UNION
+SELECT 'OH','Ohio', 'N' UNION
+SELECT 'OK','Oklahoma', 'N' UNION
+SELECT 'OR','Oregon', 'N' UNION
+SELECT 'PA','Pennsylvania', 'N' UNION
+SELECT 'RI','Rhode Island', 'N' UNION
+SELECT 'SC','South Carolina', 'N' UNION
+SELECT 'SD','South Dakota', 'N' UNION
+SELECT 'TN','Tennessee', 'N' UNION
+SELECT 'TX','Texas', 'N' UNION
+SELECT 'UT','Utah', 'N' UNION
+SELECT 'VT','Vermont', 'N' UNION
+SELECT 'VA','Virginia', 'N' UNION
+SELECT 'WA','Washington', 'N' UNION
+SELECT 'WV','West Virginia', 'N' UNION
+SELECT 'WI','Wisconsin', 'N' UNION
+SELECT 'WY','Wyoming', 'N' UNION
+SELECT 'DC','Washington DC', 'N' UNION
+SELECT 'PR','Puerto Rico', 'Y' UNION
+SELECT 'VI','U.S. Virgin Islands', 'Y' UNION
+SELECT 'AS','American Samoa', 'Y' UNION
+SELECT 'GU','Guam', 'Y' UNION
+SELECT 'MP','Northern Mariana Islands', 'Y'
 ;
 
 CREATE TABLE [UsrType]
